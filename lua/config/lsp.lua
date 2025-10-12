@@ -1,4 +1,6 @@
 vim.lsp.enable({
+  -- .ts
+  "vtsls",
   -- .lua
   "luals"
 })
