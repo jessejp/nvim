@@ -1,14 +1,16 @@
+vim.g.mapleader = "<Space>"
+
 require("config.lazy")
 require("config.lsp")
 
-vim.opt.winborder = 'rounded'
+vim.opt.winborder = "rounded"
 vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
-vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
-vim.keymap.set("n", "<space>x", ":.lua<CR>")
-vim.keymap.set("v", "<space>x", ":.lua<CR>")
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<leader>x", ":.lua<CR>")
+vim.keymap.set("v", "<leader>x", ":.lua<CR>")
 
 -- Highlight when yanking (copying) text
 -- Try it with `yap` in normal mode

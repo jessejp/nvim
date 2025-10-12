@@ -18,15 +18,19 @@ return {
         }
       }
 
-      vim.keymap.set("n", "<space>fd", require('telescope.builtin').find_files)
+      require('telescope').load_extension('fzf')
 
-      vim.keymap.set("n", "<space>fh", require('telescope.builtin').help_tags)
+      vim.keymap.set("n", "<leader>fd", require('telescope.builtin').find_files)
+
+      vim.keymap.set("n", "<leader>fh", require('telescope.builtin').help_tags)
       -- quickly to go config neovim in any project
-      vim.keymap.set("n", "<space>en", function()
+      vim.keymap.set("n", "<leader>en", function()
         require('telescope.builtin').find_files {
-          cwd = vim.fn.stdpath("config")
+          cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy")
         }
       end)
+
+      require "config.telescope.multigrep".setup()
     end
   }
 }
