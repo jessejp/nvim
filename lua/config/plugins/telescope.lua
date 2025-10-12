@@ -26,7 +26,7 @@ return {
       -- quickly to go config neovim in any project
       vim.keymap.set("n", "<leader>en", function()
         require('telescope.builtin').find_files {
-          cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy")
+          cwd = vim.fn.stdpath("config")
         }
       end)
 
