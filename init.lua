@@ -1,5 +1,7 @@
 require("config.lazy")
+require("config.lsp")
 
+vim.opt.winborder = 'rounded'
 vim.opt.shiftwidth = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
