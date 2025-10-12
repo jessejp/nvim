@@ -16,6 +16,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Usually not needed if server supports "textDocument/willSaveWaitUntil".
     if not client:supports_method('textDocument/willSaveWaitUntil')
         and client:supports_method('textDocument/formatting') then
+
       vim.api.nvim_create_autocmd('BufWritePre', {
         group = vim.api.nvim_create_augroup('my.lsp', { clear = false }),
         buffer = args.buf,
@@ -23,6 +24,31 @@ vim.api.nvim_create_autocmd('LspAttach', {
           vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
         end,
       })
+
+      local augroup = vim.api.nvim_create_augroup
+      local autocmd = vim.api.nvim_create_autocmd
+      augroup("__formatter__", { clear = true })
+      autocmd("BufWritePost", {
+        group = "__formatter__",
+        command = ":FormatWrite",
+      })
     end
   end,
 })
+
+local format_prettier = function()
+  return {
+    exe = "npx",
+    args = { "prettier", "--stdin-filepath", vim.api.nvim_buf_get_name(0) },
+    stdin = true
+  }
+end
+
+require('formatter').setup {
+  logging = true,
+  filetype = {
+    javascript = { format_prettier },
+    typescript = { format_prettier },
+    typescriptreact = { format_prettier },
+  }
+}

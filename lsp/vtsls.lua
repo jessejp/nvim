@@ -3,4 +3,5 @@ return {
   cmd = { "vtsls", "--stdio" },
   filetypes = { "typescript", "javascript" },
   root_markers = { ".git" },
+
 }
