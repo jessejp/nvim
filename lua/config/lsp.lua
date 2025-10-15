@@ -2,7 +2,9 @@ vim.lsp.enable({
   -- .ts
   "vtsls",
   -- .lua
-  "luals"
+  "luals",
+  -- vscode json server
+  "jsonls"
 })
 
 vim.diagnostic.config({ virtual_text = true })
