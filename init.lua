@@ -21,6 +21,8 @@ vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Un-indent line' })
 vim.keymap.set('v', '<Tab>', '>gv', { desc = 'Indent selection' })
 vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Un-indent selection' })
 
+-- Commenting
+vim.keymap.set({ "n", "v" }, '<leader>c', 'gcc', { desc = 'Comment code lines under cursor', remap = true })
 
 -- Highlight when yanking (copying) text
 -- Try it with `yap` in normal mode

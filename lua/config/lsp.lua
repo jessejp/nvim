@@ -11,11 +11,22 @@ vim.lsp.enable({
 
 vim.diagnostic.config({ virtual_text = true })
 
+
 --Example: Enable auto-completion and auto-formatting ("linting"): >lua
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+    local opts = { buffer = args.buf, desc = "LSP" }
+
+    -- Jumps to the source file where the type is defined
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+
+    -- Go to type definition
+    vim.keymap.set('n', 'gT', vim.lsp.buf.type_definition, opts)
+
+    vim.keymap.set('n', 'gh', vim.lsp.buf.hover, opts)
+
     -- Auto-format ("lint") on save.
     -- Usually not needed if server supports "textDocument/willSaveWaitUntil".
     if not client:supports_method('textDocument/willSaveWaitUntil')
