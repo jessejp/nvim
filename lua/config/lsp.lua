@@ -62,5 +62,7 @@ require('formatter').setup {
     javascript = { format_prettier },
     typescript = { format_prettier },
     typescriptreact = { format_prettier },
+    html = { format_prettier },
+    css = { format_prettier },
   }
 }
