@@ -1,6 +1,8 @@
 vim.lsp.enable({
   -- .ts
   "vtsls",
+  -- deno
+  "denols",
   -- .lua
   "luals",
   -- vscode langserver extracted

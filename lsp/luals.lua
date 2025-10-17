@@ -10,6 +10,7 @@ local capabilities = {
 
 capabilities = require('blink.cmp').get_lsp_capabilities(capabilities)
 
+---@type vim.lsp.ClientConfig
 return {
   cmd = { "lua-language-server" },
   filetypes = { "lua" },
