@@ -21,6 +21,12 @@ vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Un-indent line' })
 vim.keymap.set('v', '<Tab>', '>gv', { desc = 'Indent selection' })
 vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Un-indent selection' })
 
+-- Move Lines
+vim.keymap.set("n", "<A-K>", ":m .-2<CR>==", { desc = "Move line up" })
+vim.keymap.set("n", "<A-J>", ":m .+1<CR>==", { desc = "Move line down" })
+vim.keymap.set("v", "<A-J>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "<A-K>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
+
 -- Commenting
 vim.keymap.set({ "n", "v" }, '<leader>c', 'gcc', { desc = 'Comment code lines under cursor', remap = true })
 
