@@ -16,6 +16,6 @@ return {
   cmd = { "vtsls", "--stdio" },
   capabilities = capabilities,
   filetypes = { "typescript", "javascript" },
-  root_markers = { ".git" },
+  root_markers = { "package.json" },
 
 }
