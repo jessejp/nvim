@@ -14,7 +14,14 @@ return {
   -- typescript
   cmd = { "vtsls", "--stdio" },
   capabilities = capabilities,
-  filetypes = { "typescript", "javascript" },
+  filetypes = {
+    "typescript",
+    "javascript",
+    "javascriptreact",
+    "javascript.jsx",
+    "typescriptreact",
+    "typescript.tsx"
+  },
   root_markers = { ".git" },
 
 }
