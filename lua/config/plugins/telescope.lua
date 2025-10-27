@@ -24,7 +24,7 @@ return {
 
       vim.keymap.set("n", "<leader>fh", require('telescope.builtin').help_tags)
       -- quickly to go config neovim in any project
-      vim.keymap.set("n", "<leader>en", function()
+      vim.keymap.set("n", "<leader>fn", function()
         require('telescope.builtin').find_files {
           cwd = vim.fn.stdpath("config")
         }

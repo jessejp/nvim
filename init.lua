@@ -27,8 +27,8 @@ vim.keymap.set("n", "<A-J>", ":m .+1<CR>==", { desc = "Move line down" })
 vim.keymap.set("v", "<A-J>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 vim.keymap.set("v", "<A-K>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
--- Commenting
-vim.keymap.set({ "n", "v" }, '<leader>c', 'gcc', { desc = 'Comment code lines under cursor', remap = true })
+-- Commenting (lets use gcc instead)
+-- vim.keymap.set({ "n", "v" }, '<leader>c', 'gcc', { desc = 'Comment code lines under cursor', remap = true })
 
 -- Highlight when yanking (copying) text
 -- Try it with `yap` in normal mode
