@@ -6,7 +6,10 @@ vim.lsp.enable({
   -- vscode langserver extracted
   "jsonls",
   "cssls",
-  "htmlls"
+
+  -- .html
+  "htmlls",
+  "emmetls"
 })
 
 vim.diagnostic.config({ virtual_text = true })
