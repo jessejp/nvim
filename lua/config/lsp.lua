@@ -9,7 +9,9 @@ vim.lsp.enable({
 
   -- .html
   "htmlls",
-  "emmetls"
+  "emmetls",
+
+  "tailwindcssls"
 })
 
 vim.diagnostic.config({ virtual_text = true })

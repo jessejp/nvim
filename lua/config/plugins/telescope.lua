@@ -21,6 +21,7 @@ return {
       require('telescope').load_extension('fzf')
 
       vim.keymap.set("n", "<C-S-P>", require('telescope.builtin').find_files)
+      vim.keymap.set("n", "<leader>fd", require('telescope.builtin').find_files)
 
       vim.keymap.set("n", "<leader>fh", require('telescope.builtin').help_tags)
       -- quickly to go config neovim in any project

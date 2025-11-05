@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = "html",
+  pattern = { "html", "typescriptreact", "typescript.tsx" },
   callback = function()
     vim.lsp.start({
       cmd = { "emmet-language-server", "--stdio" },

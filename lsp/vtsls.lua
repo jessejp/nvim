@@ -23,5 +23,4 @@ return {
     "typescript.tsx"
   },
   root_markers = { ".git" },
-
 }
