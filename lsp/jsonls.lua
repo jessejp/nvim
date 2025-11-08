@@ -1,3 +1,4 @@
+---@type vim.lsp.ClientConfig
 return {
   -- json for tsconfig, jsconfig etc
   cmd = { "vscode-json-language-server", "--stdio" },
