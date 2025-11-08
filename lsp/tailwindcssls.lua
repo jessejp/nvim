@@ -8,5 +8,8 @@ return {
     "typescriptreact",
     "typescript.tsx"
   },
-  root_markers = { ".tw" }
+  root_markers = {
+    'tailwind.config.js',
+    'tailwind.config.ts',
+  }
 }
