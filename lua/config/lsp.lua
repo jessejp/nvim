@@ -1,10 +1,4 @@
-vim.lsp.enable({
-  -- .ts
-  -- "vtsls",
-
-  -- deno
-  "denols",
-
+local clients = {
   -- .lua
   "luals",
 
@@ -16,7 +10,20 @@ vim.lsp.enable({
   "htmlls",
   "emmetls",
 
-  "tailwindcssls"
-})
+  "tailwindcssls",
 
-vim.diagnostic.config({ virtual_text = true })
+  -- .ts
+  "vtsls",
+
+  -- deno
+  "denols"
+}
+
+vim.lsp.enable(clients)
+
+vim.diagnostic.config(
+  {
+    virtual_text = true,
+    virtual_lines = { current_line = true }
+  }
+)

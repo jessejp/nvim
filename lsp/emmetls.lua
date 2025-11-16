@@ -1,7 +1,7 @@
 return {
   cmd = { "emmet-language-server", "--stdio" },
   root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
-  filetypes = { "html", "typescriptreact", "typescript.tsx" },
+  filetypes = { "html", "typescript", "typescriptreact", "typescript.tsx" },
   -- Read more about this options in the [vscode docs](https://code.visualstudio.com/docs/editor/emmet#_emmet-configuration).
   -- **Note:** only the options listed in the table are supported.
   init_options = {
