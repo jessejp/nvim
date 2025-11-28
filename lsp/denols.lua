@@ -68,6 +68,7 @@ vim.lsp.config('denols', {
   cmd = { 'deno', 'lsp' },
   cmd_env = { NO_COLOR = true },
   filetypes = {
+    -- 'javascript',
     'typescript',
     'typescriptreact',
     'typescript.tsx',

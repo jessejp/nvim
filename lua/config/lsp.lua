@@ -13,7 +13,7 @@ local clients = {
   "tailwindcssls",
 
   -- .ts
-  "vtsls",
+  "ts_ls",
 
   -- deno
   "denols"
@@ -21,9 +21,9 @@ local clients = {
 
 vim.lsp.enable(clients)
 
-vim.diagnostic.config(
-  {
-    virtual_text = true,
-    virtual_lines = { current_line = true }
-  }
-)
+-- vim.diagnostic.config(
+--   {
+--     virtual_text = true,
+--     -- virtual_lines = { current_line = true }
+--   }
+-- )
